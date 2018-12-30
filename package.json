@@ -1,6 +1,6 @@
 {
   "name": "use-simple-logger",
-  "version": "0.0.1-beta.5",
+  "version": "0.0.1-beta.6",
   "description": "Log state updates",
   "scripts": {
     "build": "webpack --config webpack.config.js",
