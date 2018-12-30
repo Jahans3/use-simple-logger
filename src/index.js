@@ -9,17 +9,10 @@ export function createLogger ({
 } = {}) {
   return (state, action, getNextState) => {
     const timer = new Date();
-    const logParams = [];
-    const logStr = `
-      ${logAction
-        ? logParams.push(defaultStyle, actionStyle, defaultStyle) && `c%Action: %c${action.type} c%@ ${timer.getHours()}:${timer.getMinutes()}`
-        : undefined}
-      ${logPrev
-        ? logParams.push(`${stateStyle} color: red;`, state) && 'c%Prev State: %o' : undefined}
-      ${logNext
-        ? logParams.push(`${stateStyle} color: green`, getNextState()) && 'c%Next State: %o' : undefined}
-    `;
-    console.log(logStr, ...logParams);
+
+    logAction && console.log(`c%Action: %c${action.type} c%@ ${timer.getHours()}:${timer.getMinutes()}`, defaultStyle, actionStyle, defaultStyle);
+    logPrev && console.log('c%Prev State: %o', `${stateStyle} color: red;`, state);
+    logNext && console.log('c%Next State: %o', `${stateStyle} color: green`, getNextState());
   };
 }
 
