@@ -7,7 +7,7 @@ Logs action, time (HH:MM:SS:MS), previous state and next state:
 
 Also handles async actions (intermediate state is ignored in final log):
 
-<img src="https://github.com/Jahans3/use-simple-logger/blob/master/async-log.png?raw=true">
+<img src="https://github.com/Jahans3/use-simple-logger/blob/master/asyc-log.png?raw=true">
 
 ## Installation
 ```
