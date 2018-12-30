@@ -1,5 +1,5 @@
 # Use Simple Logger
-A tiny (2kb) state inspector for [Use Simple State](https://github.com/Jahans3/use-simple-logger), based on Redux Logger.
+A tiny (2kb) state inspector for [Use Simple State](https://github.com/Jahans3/use-simple-state), based on Redux Logger.
 
 Logs action, time (HH:MM:SS:MS), previous state and next state:
 
