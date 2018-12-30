@@ -1,9 +1,10 @@
 {
   "name": "use-simple-logger",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "Log state updates",
   "scripts": {
-    "build": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "release": "yarn build && yarn publish"
   },
   "main": "lib/main.js",
   "author": "Josh Jahans",
