@@ -1,5 +1,5 @@
 const defaultStyle = 'font-size: 14px; color: grey;';
-const actionStyle = 'font-size: 17px; font-weight: 600; color: pink;';
+const actionStyle = 'font-size: 17px; font-weight: 600; color: hotpink;';
 const stateStyle = 'font-size: 14px; font-weight: 600;';
 
 export function createLogger ({
@@ -7,12 +7,17 @@ export function createLogger ({
   logNext = true,
   logAction = true
 } = {}) {
-  return (state, action, getNextState) => {
-    const timer = new Date();
-
-    logAction && console.log(`c%Action: %c${action.type} c%@ ${timer.getHours()}:${timer.getMinutes()}`, defaultStyle, actionStyle, defaultStyle);
-    logPrev && console.log('c%Prev State: %o', `${stateStyle} color: red;`, state);
-    logNext && console.log('c%Next State: %o', `${stateStyle} color: green`, getNextState());
+  return (action, state, getNextState) => {
+    if (logAction) {
+      const timer = new Date();
+      console.log(`%cAction: %c${action.type} %c@ ${timer.getHours()}:${timer.getMinutes()}:${timer.getSeconds()}:${timer.getMilliseconds()}`, defaultStyle, actionStyle, defaultStyle);
+    }
+    if (logPrev) {
+      console.log('%cPrev State: %o', `${stateStyle} color: red;`, state);
+    }
+    if (logNext) {
+      console.log('%cNext State: %o', `${stateStyle} color: green;`, getNextState());
+    }
   };
 }
 
