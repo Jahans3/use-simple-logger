@@ -30,7 +30,7 @@ export default App () {
 }
 ```
 
-`*Note: the logger middleware should always go last*`
+*`Note: the logger middleware should always go last`*
 
 For more fine-grained control, you can import `createLogger` and pass options:
 
