@@ -19,6 +19,7 @@ export function createLogger ({
       ${logNext
         ? logParams.push(`${stateStyle} color: green`, getNextState()) && 'c%Next State: %o' : undefined}
     `;
+    console.log(logStr, ...logParams);
   };
 }
 
