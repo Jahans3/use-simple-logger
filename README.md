@@ -2,10 +2,12 @@
 A tiny (2kb) state inspector for [Use Simple State](https://github.com/Jahans3/use-simple-logger), based on Redux Logger.
 
 Logs action, time (HH:MM:SS:MS), previous state and next state:
-<img src="https://raw.githubusercontent.com/Jahans3/use-simple-logger/master/log.png" width="250">
+
+<img src="https://github.com/Jahans3/use-simple-logger/blob/master/standard-log.png?raw=true">
 
 Also handles async actions (intermediate state is ignored in final log):
-<img src="https://raw.githubusercontent.com/Jahans3/use-simple-logger/master/async-log.png" width="250">
+
+<img src="https://github.com/Jahans3/use-simple-logger/blob/master/async-log.png?raw=true">
 
 ## Installation
 ```
